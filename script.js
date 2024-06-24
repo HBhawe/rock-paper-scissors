@@ -1,8 +1,8 @@
-const choices = ["rock", "paper", "scissors"];
+const choices = ["ROCK", "PAPER", "SCISSORS"];
 
 let getComputerChoice = function () {
   let random = Math.floor(Math.random() * 3);
-  let computerChoice = choices[random].toUpperCase();
+  let computerChoice = choices[random];
   return computerChoice;
 };
 
@@ -10,11 +10,7 @@ let getHumanChoice = function () {
   let humanChoice = prompt(
     `Enter a choice for rock, paper or scissors`
   ).toUpperCase();
-  if (
-    humanChoice != "ROCK" &&
-    humanChoice != "PAPER" &&
-    humanChoice != "SCISSORS"
-  ) {
+  if (choices.includes(humanChoice) == false) {
     alert("invalid input. try again");
     getHumanChoice();
   }
@@ -33,10 +29,10 @@ let playGame = function () {
       console.log("Human wins. Rock beats scissors");
     } else if (humanChoice === "PAPER" && computerChoice === "ROCK") {
       humanScore += 1;
-      console.log("Human wins. Rock beats scissors");
+      console.log("Human wins. Paper beats rock");
     } else if (humanChoice === "SCISSORS" && computerChoice === "PAPER") {
       humanScore += 1;
-      console.log("Human wins. Rock beats scissors");
+      console.log("Human wins. Scissors beats paper");
     } else if (humanChoice === computerChoice) {
       console.log("nobody wins.");
     } else {
