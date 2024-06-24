@@ -26,15 +26,15 @@ let playGame = function () {
     console.log(`Computer choice = ${computerChoice}`);
     if (humanChoice === "ROCK" && computerChoice === "SCISSORS") {
       humanScore += 1;
-      console.log("Human wins. Rock beats scissors");
+      console.log(`Human wins. ${humanChoice} beats ${computerChoice}`);
     } else if (humanChoice === "PAPER" && computerChoice === "ROCK") {
       humanScore += 1;
-      console.log("Human wins. Paper beats rock");
+      console.log(`Human wins. ${humanChoice} beats ${computerChoice}`);
     } else if (humanChoice === "SCISSORS" && computerChoice === "PAPER") {
       humanScore += 1;
-      console.log("Human wins. Scissors beats paper");
+      console.log(`Human wins. ${humanChoice} beats ${computerChoice}`);
     } else if (humanChoice === computerChoice) {
-      console.log("nobody wins.");
+      console.log("nobody wins. Draw");
     } else {
       computerScore += 1;
       console.log(`Computer wins. ${computerChoice} beats ${humanChoice}`);
