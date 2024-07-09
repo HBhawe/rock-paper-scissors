@@ -1,13 +1,23 @@
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .text {
   font-size: larger;
 }
 
-p {
+p,
+button,
+div {
   font-family: "Courier New", Courier, monospace;
+}
+
+button {
+  margin: 10px;
+}
+
+.choices,
+.result,
+p,
+div,
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
